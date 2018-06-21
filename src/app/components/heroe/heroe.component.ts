@@ -16,9 +16,9 @@ export class HeroeComponent {
               private _heroesServices:HeroesService) {
 
                 this.activatedRoute.params.subscribe(params=>{
-                    this.heroe = this._heroesServices.getHeroe(params["id"]);
+                    this.heroe = this._heroesServices.getHeroe(params["valor"]);
                 });
-                console.log(this.heroe);
+                //console.log(this.heroe);
   }
 
 }
