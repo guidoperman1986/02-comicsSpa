@@ -4,8 +4,7 @@ import { HeroesService,Heroe } from '../../services/heroes.service';
 
 @Component({
   selector: 'app-search',
-  templateUrl: './search.component.html',
-  styles: []
+  templateUrl: './search.component.html'
 })
 export class SearchComponent implements OnInit {
 
@@ -20,8 +19,7 @@ export class SearchComponent implements OnInit {
   ngOnInit() {
       this.activatedRoute.params.subscribe(params=>{
           this.termino = params["valor"];
-          this.heroes = this.heroeService.buscarHeroe(params["valor"]);
-          console.log(this.heroes);
+          this.heroes = this.heroeService.buscarHeroe(params["valor"]);          
       });
   }
 

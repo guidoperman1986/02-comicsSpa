@@ -66,11 +66,12 @@ export class HeroesService {
   }
 
   getHeroe(idx:number){
+    console.log(idx);
     let aux = this.heroes[idx];
     return aux;
   }
 
-  buscarHeroe(termino:string){
+  buscarHeroe(termino:string){    
     let heroesArr:Heroe[] = [];
     termino = termino.toLowerCase();
 
@@ -80,7 +81,7 @@ export class HeroesService {
 
       if( nombre.indexOf( termino ) >= 0  ){
         heroe.idx = i;
-        heroesArr.push( heroe )
+        heroesArr.push( heroe );
       }
     }
     return heroesArr;
